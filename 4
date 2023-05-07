@@ -1,0 +1,33 @@
+for (var i = 0; i < data.oList.length; i++) {
+    data.oName = data.oList[i].name;
+    data.oImg = data.ooList[i].img_url;
+    data.slider = {
+        Type: "rich_media",
+        ButtonsGroupColumns: 6,
+        ButtonsGroupRows: 5,
+        BgColor: "#FFFFFF",
+        Buttons: [{
+                Columns: 6,
+                Rows: 3,
+                ActionType: "none",
+                ActionBody: "none",
+                Text: "",
+                TextSize: "regular",
+                TextVAlign: "center",
+                Image: data.oImg,
+                TextHAlign: "left"
+            },
+            {
+                Columns: 6,
+                Rows: 1,
+                Text: data.oName,
+                ActionType: "reply",
+                ActionBody: "end_dialog",
+                TextSize: data.t_size,
+                TextVAlign: "middle",
+                TextHAlign: "middle",
+                BgColor: data.bgc
+            }
+        ]
+    };
+}
